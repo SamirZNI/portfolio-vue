@@ -1,11 +1,13 @@
-<template>
+<template> 
   <div id="app">
     <Portfolio />
   </div>
 </template>
 
+
 <script>
 import Portfolio from "./components/Portfolio.vue";
+import Header from "./components/Header.vue";
 
 export default {
   components: {
@@ -13,6 +15,7 @@ export default {
   },
 };
 </script>
+
 
 <style>
 body {
