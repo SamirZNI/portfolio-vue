@@ -1,26 +1,32 @@
 <template> 
   <div id="app">
-    <Header />
+    <Exercices />
+    <!--<Header />
     <Memory />
     <Portfolio />
-    <Footer />
+    <Footer /> -->
   </div>
+  <!-- <button @click="memory">
+    Memory
+  </button> -->
 </template>
 
 
 <script>
-import Header from "./components/Header.vue";
+/* import Header from "./components/Header.vue";
 import Portfolio from "./components/Portfolio.vue";
 import Footer from "./components/Footer.vue";
-import Memory from "./components/Memory.vue";
+import Memory from "./components/Memory.vue"; */
+import Exercices from './components/exercices.vue';
 
 
 export default {
   components: {
-    Portfolio,
+    /* Portfolio,
     Memory,
     Header,
-    Footer,
+    Footer, */
+    Exercices,
   },
 };
 </script>

@@ -3,15 +3,6 @@
     <!-- Menu mobile -->
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" id="menu-icon">&#9776;</label>
-    <nav>
-      <ul>
-        <li><a href="#aPropos">À propos</a></li>
-        <li><a href="#softSkills">Soft Skills</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#realisations">Réalisations</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
     <section id="banner">
     <img src="@/assets/test.png" id="pp3" alt="Photo de profil" />
         <section id="topPresentation">

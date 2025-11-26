@@ -6,9 +6,7 @@
     <nav>
       <ul>
         <li><a href="#aPropos">À propos</a></li>
-        <li><a href="#softSkills">Soft Skills</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#competences">Compétences & Technologies</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -22,9 +20,6 @@ export default {
 </script>
 
 <style>
-header {
-    padding: 8px 0; /* Ajoute de l'espace autour du texte */
-}
 nav {
     list-style: none; /* Supprime les puces */
     display: flex; /* Affiche les éléments en ligne */
@@ -36,7 +31,7 @@ nav {
     left: 0;
     width: 100%;
     /* Pour qu’il reste au-dessus du reste du contenu */
-    z-index: 1000;
+    z-index: 1000; /* Valeur élevée pour rester au-dessus */
 }
 nav ul {
     list-style: none;
