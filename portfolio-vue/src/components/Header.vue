@@ -1,14 +1,17 @@
 <template>
   <div class="header">
-    <section id="banner">
-    <img src="@/assets/test.png" id="pp3" alt="Photo de profil" />
-        <section id="topPresentation">
-          <h1>Samir Ziani</h1>
-          <p id="p1">
-            Étudiant en BTS SIO (Services Informatiques aux Organisations)
-          </p>
-        </section>
-    </section>
+    <!-- Menu mobile -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="menu-icon">&#9776;</label>
+    <nav>
+      <ul>
+        <li><a href="#aPropos">À propos</a></li>
+        <li><a href="#softSkills">Soft Skills</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -22,71 +25,90 @@ export default {
 header {
     padding: 8px 0; /* Ajoute de l'espace autour du texte */
 }
-#banner {
-    display: flex;
-    height: 100vh; /* Hauteur de la bannière */
-    align-items: center; /* Centre verticalement le contenu */
-    justify-content: center; /* Centre horizontalement le contenu */
+nav {
+    list-style: none; /* Supprime les puces */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center;
+    background-color: #1d1152;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.575);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    /* Pour qu’il reste au-dessus du reste du contenu */
+    z-index: 1000;
 }
-#pp3 {
-    border-radius: 3%;
-    width: 25%; 
-    margin: 42px; /* Espace autour de l'image */
-    opacity: 0;                  /* commence invisible */
-    animation: fadeIn 1s forwards; /* animation de fondu en entrée */
-}
-@keyframes fadeIn { /* définition de l'animation */ 
-    to {
-        opacity: 1; /* termine complètement visible */
-    }
-}
-#topPresentation {
-    display: flex;
-    flex-direction: column;
-    background-color: #1b1055;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
+nav ul {
+    list-style: none;
+    display: flex; 
     justify-content: center;
-    padding: 60px;
-    margin-right: 20px;
-    margin-top: 20px;
-    width: 65%;
-    opacity: 0;                  /* commence invisible */
-    animation: fadeIn 1.5s forwards; /* animation de fondu en entrée */
+    align-items: center;
+    margin: 0;
+    padding: 13px 0;
 }
-#topPresentation h1 {
-    color: #e2e7ff;
-    font-size: 75px;
-    text-align: center;
-    justify-content: top;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+nav li {
+    margin: 0 10px;
+}
+nav a {
+    display: inline-block; /* <-- ajoute cette ligne */
+    color: rgb(255, 255, 255);
+    font-family: 'berlin sans fb demi', sans-serif;
     font-weight: bold;
+    text-shadow: #000000 1px 1px 2px;
+    font-size: 16px;
+    margin: 0 15px; /* Espace entre les liens */
+    text-decoration: none; /* Supprime le soulignement */
 }
-#topPresentation #p1 {
-    color: #d0d8ff;
-    text-align: center;
-    font-size: 40px;
-    background-color: #251968;
-    margin: 65px;
-    padding: 10px;
-    border-radius: 8px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+a:hover { /* Effet au survol du menu (passe la souris dessus) */
+    text-decoration: none; /* Supprime le soulignement au survol */
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+    transform: scale(1.04); /* Agrandit légèrement le lien au survol */
+    transition: 0.4s; /* Animation douce */
 }
-#topPresentation #p2 {
-    color: #e2e7ff;
-    text-align: center;
-    font-size: 32px;
-    text-transform: none;
-    font-family: 'Times New Roman', Times, serif;
-    padding-top: 50px;
+#menu-icon { /*Bouton menu pour mobile*/
+    display: none; /* caché sur PC */
+    font-size: 29px; /* un peu plus grand pour mobile */
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    background-color: #140568;
+    border-radius: 7px;
+    box-shadow: #000000 1px 1px 2px;
+    position: fixed;
+    top: 18px;
+    left: 24px;
+    z-index: 1100;
+    cursor: pointer;
 }
-#separateur { /*ligne de séparation blanche avec la page principal et les autres*/
-    height: 4px;
-    width: 70%;
-    margin: 0 auto; /* Centrer horizontalement */
-    justify-content: center;
-    background: linear-gradient(to right, rgba(0,0,0,0), rgb(199, 198, 255), rgba(255, 255, 255, 0));
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1f1268;
+        width: 100%;
+        margin-top: 0;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked + #menu-icon + nav ul { /* Affiche le menu quand le bouton est coché */
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
 }
 </style>
