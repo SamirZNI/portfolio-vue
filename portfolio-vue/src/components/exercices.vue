@@ -1,24 +1,36 @@
 <template>
   <div>
-    <input v-model="message" type="text" placeholder="Tapez quelque chose">
-    <addlist :items="message ? [message] : []" />
-    <li v-for="value in source" :key="value">{{ value }}</li>
+    <h2>Liste :</h2>
+    <ul>
+      <li v-for="mot in liste" :key="mot">
+        {{ mot }}
+      </li>
+    </ul>
 
-    <p>Vous avez tapé : {{ message }}</p>
+    <input v-model="element" type="text" />
+
+    <button @click="danstab">Ajouter à la liste</button>
   </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      message: ''
-    }
+      element: "",
+      liste: [],
+    };
   },
-}
+
+  methods: {
+    danstab() {
+      if (this.element !== "") {
+        this.liste.push(this.element);
+        this.element = "";
+      }
+    },
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

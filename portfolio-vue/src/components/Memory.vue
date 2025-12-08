@@ -88,8 +88,8 @@ function carteRetourner(index) {
 
 <style>
 .memory {
-  display: grid;
-  grid-template-columns: repeat(2, 100px);
+  display: grid; /* Utilise une grille CSS */
+  grid-template-columns: repeat(2, 100px); /* 2 colonnes de 100px */
   gap: 15px;
   justify-content: center;
   margin-top: 70px;
