@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  background: #ffeed8;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 24px;
+  background-image: url(Assets/background.jpeg);
+  background-repeat: no-repeat; /* Ne pas répéter l'image */
+  background-size: cover; /* Couvrir tout l'arrière-plan */
+  background-attachment: fixed; /* Rester fixe lors du défilement */
+  display: flex; 
+  justify-content: center;
+}
+
+.lettre {
+  background: #ffeed8;
+  width: 60%;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Titre */
+.titre {
+  text-align: center;
+  font-size: 35px;
+  margin-top: -50px;
+}
+
+.titre-image {
+  width: 9%;
+  vertical-align: middle; /* aligner avec le texte */
+  padding: 30px;
+}
+
+.image-intro {
+  display: flex;
+  justify-content: center; /* centre les images */
+  align-items: center;
+  gap: 40px; /* espace entre les images */
+  margin-top: 40px;
+}
+
+.image-intro1 {
+  width: 5%;
+}
+
+/* Infos de la personne */
+.infos {
+  display: flex; 
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border: 2px solid #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #f8cfa6;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.ligne-infos {
+  display: flex;
+  flex-wrap: wrap; /* pour que ça passe à la ligne si besoin */
+  align-items: center;
+  gap: 8px;
+}
+
+.ligne-infos p {
+  margin: 5px;
+}
+
+/* Intro pour la liste etc */
+.texte-intro {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+/* Bloc principal */
+.bloc-principal {
+  display: flex; /* pour aligner les deux colonnes, de droite et gauche */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.bloc {
+  border: 2px solid #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #f8cfa6;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.568);
+}
+/* colonne de gauche */
+.bloc-liste {
+  flex: 1; /* même largeur que la colonne droite */
+  border-radius: 20px;
+}
+
+.liste {
+  list-style: none; /* enlever les puces */
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.liste li {
+  height: 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.icone-liste {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.liste-image {
+  width: 20px;
+  height: 20px;
+  margin-left: 9px;
+}
+
+/* Colonne de droite */
+.colonne-droite {
+  flex: 1; /* même largeur que la liste */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Bas de page */
+
+.bloc-signature {
+  text-align: center;
+}
+
+.fresque {
+  width: 85%;
+  display: block; /* pour que margin auto fonctionne */
+  margin: 0 auto 15px; /* centrer et espacer du texte en dessous */
+  border-radius: 40px;
+  margin-top: 45px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 29px;
+}
+h3 {
+  font-size: 29px;
+}

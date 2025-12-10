@@ -1,8 +1,7 @@
 <template> 
   <div id="app">
-    <eval />
-    <!--Exercices />
-    <Header />
+    <Exercices />
+    <!--Header />
     <Memory />
     <Portfolio />
     <Footer /> -->
@@ -19,7 +18,6 @@ import Portfolio from "./components/Portfolio.vue";
 import Footer from "./components/Footer.vue";
 import Memory from "./components/Memory.vue"; */
 import Exercices from './components/exercices.vue';
-import Eval from './components/eval.vue';
 
 
 export default {
@@ -29,7 +27,6 @@ export default {
     Header,
     Footer, */
     Exercices,
-    Eval,
   },
 };
 </script>

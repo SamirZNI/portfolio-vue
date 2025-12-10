@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Évaluation CSS Samir</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Snowburst+One&display=swap"rel="stylesheet"/> <!-- Importation de cette police via Google Fonts -->
+  </head>
+
+  <body>
+    <section class="lettre">
+
+      <header class="titre">
+        <h1><img src="Assets/noeltitre1.png"class="titre-image"alt="décoration Noël"/>Cher Père Noël<img src="Assets/noel2.png"class="titre-image"alt="décoration Noël"/></h1>
+      </header>
+
+      <section class="infos">
+        <div class="ligne-infos">
+          <p>Je m'appelle <input type="text"></p>
+          <p>, j'ai <input type="number"> ans.</p>
+        </div>
+
+        <div class="ligne-infos">
+          <p>J'habite à <input type="text"></p>
+          <p>et j'ai été <input type="text"></p>
+          <p>sage !</p>
+        </div>
+      </section>
+        <div class="image-intro">
+            <img src="Assets/cadeau7.png" class="image-intro1">
+            <img src="Assets/cadeaux6.png" class="image-intro1">
+            <img src="Assets/cadeau8.png" class="image-intro1">
+            <img src="Assets/cadeau9.png" class="image-intro1">
+            <img src="Assets/sapin1.png" class="image-intro1">
+        </div>
+      <section class="texte-intro">
+        <p>J’aimerais beaucoup que tu m’apportes :</p>
+      </section>
+
+      <section class="bloc-principal">
+        <!-- LISTE à GAUCHE -->
+        <section class="bloc bloc-liste">
+          <h2> Ma liste <img src="Assets/liste.png"class="liste-image"alt="liste de cadeaux"/></h2>
+          <ul class="liste"> <!-- J'ai ajouté des input pour les zones de texte, sans effet, juste pour le style -->
+            <li><img src="Assets/cadeau1.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau2.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau3.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau4.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau1.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau2.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau3.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau4.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau1.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+            <li><img src="Assets/cadeau2.png" class="icone-liste"alt="icône pour liste cadeau" /><input type="text"></li>
+          </ul>
+        </section>
+
+        <!-- COLONNE DROITE -->
+        <div class="colonne-droite">
+          <section class="bloc">
+            <h3>Le <img src="Assets/cadeau5.png" class="icone-liste"alt="image décrivant un cadeau"/>qui me plairait le plus</h3>
+            <input type="text" class="cadeau" />
+          </section>
+
+          <section class="bloc">
+            <h3>N'oublie pas de me gâter aussi :</h3>
+            <input type="text" class="gater" />
+          </section>
+
+          <section class="bas-lettre">
+            <p>Je laisserai : <input type="text"/></p>
+            <p>pour toi et les rennes. À bientôt !</p>
+            <section class="bloc-signature">
+              <p>Signé : <input type="text"/></p>
+            </section>
+          </section>
+        </div>
+      </section>
+      <img src="Assets/noel3.png" class="fresque" alt="décoration Noël pour bas de page" />
+    </section>
+  </body>
+</html>
